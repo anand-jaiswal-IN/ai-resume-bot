@@ -29,7 +29,6 @@ def get_document_embeddings() -> GoogleGenerativeAIEmbeddings:
     """
     return GoogleGenerativeAIEmbeddings(
         model=EMBEDDING_MODEL,
-        google_api_key=GOOGLE_API_KEY,
         task_type="RETRIEVAL_DOCUMENT",
         output_dimensionality=EMBEDDING_DIMENSIONS,
     )
@@ -43,7 +42,6 @@ def get_query_embeddings() -> GoogleGenerativeAIEmbeddings:
     """
     return GoogleGenerativeAIEmbeddings(
         model=EMBEDDING_MODEL,
-        google_api_key=GOOGLE_API_KEY,
         task_type="RETRIEVAL_QUERY",
         output_dimensionality=EMBEDDING_DIMENSIONS,
     )
